@@ -1,0 +1,42 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+}
+
+.navbar .logo {
+    width: max (10%, 80px);
+}
+
+.navbar .profile {
+    width: 40px;
+    border-radius: 100%;
+}
+
+.logout-button {
+    background-color: #d9534f; /* Bootstrap danger color for a red button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.logout-button:hover {
+    background-color: #c9302c; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+.logout-button:focus {
+    outline: none;
+}
+
+.logout-button:active {
+    background-color: #ac2925; /* Even darker red when button is pressed */
+    transform: scale(1); /* Reset the scale when button is pressed */
+}
