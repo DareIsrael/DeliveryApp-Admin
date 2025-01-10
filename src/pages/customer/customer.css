@@ -1,0 +1,70 @@
+/* Container for the users list */
+.users-list {
+    padding: 20px;
+    /* max-width: 1000px; */
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .users-list h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Styling for the user table */
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .user-table th {
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .user-table td {
+    color: #333;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .user-table tr:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .user-table th, .user-table td {
+      padding: 10px 8px;
+    }
+  
+    .users-list {
+      padding: 10px;
+    }
+  
+    .users-list h2 {
+      font-size: 20px;
+    }
+  }
+  

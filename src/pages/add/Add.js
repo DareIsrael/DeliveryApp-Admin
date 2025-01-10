@@ -13,6 +13,7 @@ const Add = ({url}) => {
     name:"",
     description:"",
     price:"",
+    discount:"",
     category:"tvs"
    })
 
@@ -27,7 +28,9 @@ const Add = ({url}) => {
    const formData = new FormData();
    formData.append ("name", data.name)
    formData.append ("description", data.description)
-   formData.append ("price", Number(data.price))
+   formData.append ("price", data.price)
+   formData.append ("initprice", data.initprice)
+   formData.append ("discount", data.discount)
    formData.append ("category", data.category)
    formData.append ("image", image)
    const response = await axios.post(`${url}/api/food/add`, formData);
@@ -36,6 +39,8 @@ const Add = ({url}) => {
             name:"",
             description:"",
             price:"",
+            initprice:"",
+            discount:"",
             category:"tvs"
            })
            setImage(false)
@@ -45,14 +50,13 @@ const Add = ({url}) => {
    }
  }
 
- 
-
 
   return (
     <div className='add'>
     <form className='flex-col'  onSubmit={onSubmitHandler}>
       <div className='add-img-upload flex-col'>
       <p>Upload Image</p>
+      
       <label htmlFor='image'>
           <img src={image?URL.createObjectURL(image):assets.upload_area} />
 
@@ -74,23 +78,32 @@ const Add = ({url}) => {
        <div className='add-category flex-col'>
        <p>Product category</p>
        <select  onChange={onChangeHandler} value={data.category}  name='category' >
-       <option value='tvs' >TVs</option>
-       <option value='sounds' >Sounds</option>
-       <option value='cookers' >Cookers</option>
-       <option value='fans' >Fans</option>
-       <option value='freezers' >Freezers</option>
-       <option value='tables' >Tables</option>
-       <option value='iron' >Iron</option>
-       <option value='washing' >Washing-M</option>
-       <option value='ac' >AC</option>
+       <option value='PlasmaTV' >PlasmaTV</option>
+       <option value='Sound' >Sounds</option>
+       <option value='Cooker' >Cooker</option>
+       <option value='Fan' >Fan</option>
+       <option value='Freezer' >Freezer</option>
+       <option value='Table' >Table</option>
+       <option value='Iron' >Iron</option>
+       <option value='Washing-Machine' >Washing</option>
+       <option value='AC' >AC</option>
 
        </select>
        </div>
        <div className='add-price flex-col'>
         <p>Product price</p>
-        <input onChange={onChangeHandler} value={data.price} type='Number' name='price' placeholder='$20' />
+        <input onChange={onChangeHandler} value={data.price} type='number' name='price' placeholder='#20' />
+        </div>
+        <div className='add-price flex-col' >
+        <p>Initial Price</p>
+        <input onChange={onChangeHandler} value={data.initprice} type='text' name='initprice' placeholder='' />
 
-       </div>
+        </div>
+        <div className='add-price flex-col' >
+        <p>Discount</p>
+        <input onChange={onChangeHandler} value={data.discount} type='text' name='discount' placeholder='#20' />
+
+        </div>
       </div>
       <button type='submit' className='add-btn' >ADD</button>
     </form>

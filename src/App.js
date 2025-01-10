@@ -71,9 +71,9 @@ function App() {
   };
 
   return (
-    
+   
       <Routes>
-        <Route path="/login" element={<Login onLogin={handleLogin} />} />
+         <Route path="/login" element={<Login onLogin={handleLogin} />} />
         <Route 
           path="/admin/*" 
           element={isAuthenticated ? <Admin /> : <Navigate to="/login" />} 
@@ -85,3 +85,5 @@ function App() {
 }
 
 export default App;
+
+

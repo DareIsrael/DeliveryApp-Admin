@@ -25,6 +25,13 @@ const Sidebar = () => {
 
                 </NavLink>
 
+                <NavLink to='/admin/customer' className='sidebar-option'>
+                    <img src={assets.customers_icon} />
+                    <p>Customers</p>
+
+                </NavLink>
+
+
             </div>
 
         </div>

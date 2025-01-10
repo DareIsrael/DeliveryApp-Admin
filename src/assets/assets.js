@@ -1,6 +1,6 @@
 import React from 'react'
 import search_icon from './search_icon.png'
-import logo from './logo.png'
+import logo from './Mylogo.jpeg'
 import cart from './cart.png'
 import add_icon_white from './add_icon_white.png'
 import remove_icon_red from './remove_icon_red.png'
@@ -10,6 +10,7 @@ import profile_image from './profile_image.jpg'
 import order_icon from './order_icon.png'
 import upload_area from './upload_area.png'
 import parcel_icon from './parcel_icon.png'
+import customers_icon from './customers_icon.png'
 
 export const assets = {
 
@@ -23,7 +24,8 @@ export const assets = {
     profile_image,
     order_icon,
     upload_area,
-    parcel_icon
+    parcel_icon,
+    customers_icon
 
   }
 

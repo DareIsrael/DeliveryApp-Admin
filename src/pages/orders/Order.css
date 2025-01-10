@@ -34,6 +34,85 @@
     outline: none;
 }
 
+
+
+/* Container for the search form */
+.order-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: #f4f4f4; /* Light grey background */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Style for input fields */
+.order-search input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333; /* Text color */
+    background-color: #fff; /* White background */
+    transition: border-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Input hover and focus effect */
+.order-search input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none;
+}
+
+/* Style for buttons */
+.order-search button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Primary blue color */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+/* Button hover effect */
+.order-search button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Button to clear search */
+.order-search button[type="button"] {
+    background-color: #dc3545; /* Red background for Clear Search */
+}
+
+.order-search button[type="button"]:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* styles.css */
+.payment-status-paid {
+    background-color: lightgreen;
+    color: green;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .payment-status-failed {
+    background-color: lightcoral;
+    color: red;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+
 @media (max-width: 1000px) {
     
     .order-item {

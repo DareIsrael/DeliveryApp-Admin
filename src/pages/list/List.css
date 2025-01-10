@@ -1,36 +1,41 @@
 .list-add {
-    /* background-color: red; */
     width: 100%;
+    padding: 20px; /* Added padding for spacing */
 }
-
 
 .list-table-format {
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr; /* Adjusted grid to give actions more space */
     align-items: center;
     gap: 10px;
-    padding: 12px 15px;
+    padding: 15px;
     border: 1px solid #cacaca;
-    font-size: 13px;
-    /* background-color: red; */
+    font-size: 14px;
+    background-color: #fff; /* Clean background */
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .list-table-format.title {
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
 }
+
 .list-table-format img {
     width: 50px;
+    border-radius: 5px;
 }
 
 .pagination-controls {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0; /* Adjust spacing as needed */
+    margin: 20px 0;
 }
 
 .pagination-controls button {
-    background-color: brown; /* Bootstrap primary color */
+    background-color: brown;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -41,7 +46,7 @@
 }
 
 .pagination-controls button:disabled {
-    background-color: #ccc; /* Light gray for disabled state */
+    background-color: #ccc;
     cursor: not-allowed;
 }
 
@@ -49,12 +54,75 @@
     font-size: 16px;
     margin: 0 10px;
 }
-@media (max-width:600px) {
-    .list-table-format{
+
+.list-table-format input {
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.list-table-format button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.list-table-format button:hover {
+    background-color: #0056b3;
+}
+
+/* Container for Edit and Delete buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center; /* Ensures both buttons align */
+}
+
+.cursor {
+    background-color: red;
+    padding: 8px 8px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.cursor:hover {
+    background-color: darkred;
+}
+
+@media (max-width: 600px) {
+    .list-table-format {
         grid-template-columns: 1fr 3fr 1fr;
         gap: 15px;
     }
+
     .list-table-format.title {
         display: none;
+    }
+
+    .list-table-format img {
+        width: 40px;
+    }
+
+    .list-table-format input {
+        font-size: 12px;
+    }
+
+    .list-table-format button {
+        font-size: 12px;
+    }
+
+    .cursor {
+        padding: 8px;
+        font-size: 12px;
     }
 }
