@@ -26,9 +26,9 @@ import Customer from '../../pages/customer/customer'
 const Admin = () => {
 
   const url = process.env.REACT_APP_BACKEND_BASEURL;
-  console.log(url)
+  // console.log(url)
   // const url= "http://localhost:4000"
-  const token = localStorage.getItem('token'); 
+  // const token = localStorage.getItem('token'); 
 
   return (
 
@@ -48,7 +48,7 @@ const Admin = () => {
       <Route path='/add' element = {<Add url={url}/>} />
       <Route path='/list' element = {<List url={url}/>} />
       <Route path='/order' element = {<Order url={url}/>} />
-      <Route path='/customer' element = {<Customer url = {url} token={token} />} />
+      <Route path='/customer' element = {<Customer url = {url}/>} />
     </Routes>
     </div>
       
