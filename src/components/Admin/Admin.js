@@ -23,8 +23,8 @@ import Customer from '../../pages/customer/customer'
 
 
 
-const Admin = ({url}) => {
-
+const Admin = () => {
+ const url = "https://deliveryapp-api-gyft.onrender.com"
   // const url = process.env.REACT_APP_BACKEND_BASEURL;
   // console.log(url)
   // const url= "http://localhost:4000"
