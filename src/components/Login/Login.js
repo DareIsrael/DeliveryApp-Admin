@@ -5,7 +5,7 @@ import './Login.css';  // Ensure this is the correct path to your CSS file
 import Admin from '../Admin/Admin';
 
 
-const Login = ({ onLogin }) => {
+const Login = ({ onLogin , url }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
@@ -15,7 +15,7 @@ const Login = ({ onLogin }) => {
         e.preventDefault();
         
         try {
-            const response = await axios.post("http://localhost:4000/api/user/loginAdmin", {
+            const response = await axios.post(`${url}/api/user/loginAdmin`, {
                 email,
                 password
             });

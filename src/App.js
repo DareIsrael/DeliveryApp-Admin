@@ -55,7 +55,7 @@ function App() {
 
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
+  const url = process.env.REACT_APP_BACKEND_BASEURL;
 
 
   useEffect(() => {
@@ -73,10 +73,10 @@ function App() {
   return (
    
       <Routes>
-         <Route path="/" element={<Login onLogin={handleLogin} />} />
+         <Route path="/" element={<Login onLogin={handleLogin} url={url}/>} />
         <Route 
           path="/admin/*" 
-          element={isAuthenticated ? <Admin /> : <Navigate to="/" />} 
+          element={isAuthenticated ? <Admin url= {url} /> : <Navigate to="/" />} 
         />
         {/* Add other routes as needed */}
       </Routes>
