@@ -77,7 +77,7 @@ function App() {
          <Route path="/" element={<Login onLogin={handleLogin}/>} />
         <Route 
           path="/admin/*" 
-          element={isAuthenticated ? <Admin url= {url} /> : <Navigate to="/" />} 
+          element={isAuthenticated ? <Admin /> : <Navigate to="/" />} 
         />
         {/* Add other routes as needed */}
       </Routes>
