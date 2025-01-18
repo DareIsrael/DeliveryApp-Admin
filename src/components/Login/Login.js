@@ -5,13 +5,13 @@ import './Login.css';  // Ensure this is the correct path to your CSS file
 import Admin from '../Admin/Admin';
 
 
-const Login = ({ onLogin}) => {
+const Login = ({onLogin}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
-   const url = "https://deliveryapp-api-gyft.onrender.com"
-   
+    const url = process.env.REACT_APP_BACKEND_BASEURL;
+
     const handleLogin = async (e) => {
         e.preventDefault();
         
