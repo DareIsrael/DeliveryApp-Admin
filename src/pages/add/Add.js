@@ -14,7 +14,7 @@ const Add = ({url}) => {
     description:"",
     price:"",
     discount:"",
-    category:"tvs"
+    category:"PlasmaTV"
    })
 
  const onChangeHandler = (event) => {
@@ -41,7 +41,7 @@ const Add = ({url}) => {
             price:"",
             initprice:"",
             discount:"",
-            category:"tvs"
+            category:"PlasmaTV"
            })
            setImage(false)
            toast.success(response.data.message)
@@ -87,6 +87,7 @@ const Add = ({url}) => {
        <option value='Iron' >Iron</option>
        <option value='Washing-Machine' >Washing</option>
        <option value='AC' >AC</option>
+       <option value='Generator' >Generator</option>
 
        </select>
        </div>
