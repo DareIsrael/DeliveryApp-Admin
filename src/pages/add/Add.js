@@ -14,7 +14,7 @@ const Add = ({url}) => {
     description:"",
     price:"",
     discount:"",
-    category:"PlasmaTV"
+    category:"TV"
    })
 
  const onChangeHandler = (event) => {
@@ -41,7 +41,7 @@ const Add = ({url}) => {
             price:"",
             initprice:"",
             discount:"",
-            category:"PlasmaTV"
+            category:"TV"
            })
            setImage(false)
            toast.success(response.data.message)
@@ -78,16 +78,17 @@ const Add = ({url}) => {
        <div className='add-category flex-col'>
        <p>Product category</p>
        <select  onChange={onChangeHandler} value={data.category}  name='category' >
-       <option value='PlasmaTV' >PlasmaTV</option>
+       <option value='TV' >TV</option>
        <option value='Sound' >Sounds</option>
        <option value='Cooker' >Cooker</option>
        <option value='Fan' >Fan</option>
        <option value='Freezer' >Freezer</option>
-       <option value='Table' >Table</option>
+       <option value='TV-Console/Table' >TV-Console/Table</option>
        <option value='Iron' >Iron</option>
        <option value='Washing-Machine' >Washing</option>
        <option value='AC' >AC</option>
        <option value='Generator' >Generator</option>
+       <option value='Utility' >Utility</option>
 
        </select>
        </div>
